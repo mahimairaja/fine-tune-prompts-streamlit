@@ -5,6 +5,7 @@ from langchain import hub
 
 
 st.title('Prompt Optimizer 🦜🔗')
+st.caption('-- [iKurious](https://github.com/mahimairaja)')
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 model_name = st.sidebar.selectbox('Model', ['gpt-4o', 'gpt-3.5-turbo', 'gpt-4-turbo'], placeholder='Choose a model')
@@ -27,8 +28,8 @@ def generate_response(old_prompt, task):
     st_copy_to_clipboard(response)
 
 with st.form('my_form'):
-    task = st.text_input(label='task', placeholder='Enter the task to be optimized...') 
-    prompt = st.text_area(label='prompt', placeholder='Enter the prompt to be optimized...', height=200)
+    task = st.text_input(label='Task', placeholder='Enter the task to be performed') 
+    prompt = st.text_area(label='Prompt', placeholder='Enter the prompt to be optimized...', height=200)
     submitted = st.form_submit_button('Submit')
     if not openai_api_key.startswith('sk-'):
         st.warning('Please enter your OpenAI API key!', icon='⚠')
