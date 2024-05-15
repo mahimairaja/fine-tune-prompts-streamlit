@@ -35,5 +35,5 @@ with st.form('my_form'):
     if submitted and openai_api_key.startswith('sk-'):
         with st.spinner('Optimizing...'):
             generate_response(prompt, task)
-            st.divider
+            st.divider()
             st.caption('CREDITS: The instruction is contributed by :blue[Hardkothari] - [LangChain Hub](https://smith.langchain.com/hub/hardkothari/prompt-maker)')
