@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fine-tune-prompts-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["Mahimai Raja J <mahimairaja3@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <4"
+streamlit = "^1.34.0"
+langchain-openai = "^0.1.6"
+st-copy-to-clipboard = "^0.1.6"
+langchain = "^0.1.20"
+langchainhub = "^0.1.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
